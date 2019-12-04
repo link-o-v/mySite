@@ -13,19 +13,20 @@ a {
 }
 
 
-#bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    /* Preserve aspet ratio */
+main {
+    background-image: url(img/14840.png);
     min-width: 100%;
     min-height: 100%;
 }
 
 body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
     font-family: 'Roboto', sans-serif;
     background: #E8E8EA;
-
     font-size: 14px;
     line-height: 16px;
     margin: 0;
@@ -33,18 +34,18 @@ body {
 }
 
 /* контейнер (устанавливает  ширину блока в зависимости от ширины viewport) */
-.container {
+/*.container {
     position: relative;
     margin-left: auto;
     margin-right: auto;
     padding-right: 15px;
     padding-left: 15px;
-}
+}*/
 
 
 
-/* flex-контейнер */
 .header {
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -66,7 +67,7 @@ body {
 }
 
 header h1 {
-
+    padding-left: 15px;
     white-space: nowrap;
     font-style: normal;
     font-weight: 700;
@@ -82,6 +83,7 @@ header h1 {
 
 
 .header__p {
+    padding-left: 15px;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
@@ -94,7 +96,6 @@ header h1 {
 
 .header__p li {
     border-left: 10px solid #01B460;
-
     padding-left: 10px;
     margin-bottom: 10px;
 }
@@ -102,7 +103,7 @@ header h1 {
 .header__nav {
 
     background-color: rgba(251, 251, 251, 0.2);
-    margin: 0 -15px;
+
 }
 
 .header__nav__menu {
@@ -118,9 +119,17 @@ header h1 {
     font-size: 18px;
     line-height: 21px;
     color: #423C4A;
+    padding: 10px;
+
 
 }
 
+.header__nav__menu a:hover {
+    background-color: rgba(251, 187, 31, 0.6);
+    border-radius: 40px;
+
+
+}
 
 h2 {
     margin-top: 78px;
@@ -137,7 +146,6 @@ h2 {
 
 .h2__hr {
     margin-bottom: 50px;
-    align: center;
     width: 220px;
     border: 1px solid #FBBB1F;
 
@@ -168,7 +176,6 @@ h2 {
 .our-services__avk__about-avk {
     width: 427px;
     min-height: 400px;
-
     padding: 10px 40px;
     background: #423C4A;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
@@ -290,41 +297,81 @@ h3 {
     user-select: none;
 }
 
-.popup-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.btn:hover {
+    opacity: 0.8;
 }
 
-/* The actual popup */
+/*.modal (background)*/
 .popup {
-    visibility: hidden;
-    position: absolute;
-    z-index: 5;
-    width: 943px;
-    height: 797px;
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+
+/*.modal-content*/
+.form-container {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding: 80px 153px;
-    background: #FBFBFB;
+    align-content: center;
+    width: 60%;
+    margin: 5% auto 15% auto;
+    background-color: #fefefe;
     color: #423C4A;
-    border: 1px solid #423C4A;
+
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     letter-spacing: normal;
+}
+
+.textcontainer {
     text-align: center;
-    color: #423C4A;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    font-size: 48px;
+    font-weight: 900;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #FBBB1F;
+    cursor: pointer;
+}
+
+.order-avk-form,
+.order-courses-form {
+    margin: 5% auto 5% auto;
+    width: 80%;
+    text-align: left;
+
+}
 
 
-
+.price__order input[type=text] {
+    align-self: stretch;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
 }
 
 .popup .p-small {
@@ -333,62 +380,33 @@ h3 {
     line-height: 21px;
 }
 
-
-.price__order-avk__button .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-}
-
-.price__order-courses__button .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s;
-}
-
-
-.order-avk-form,
-order-courses-form {
-    padding: 10px;
-    max-width: 638px;
-
-}
-
-
-.price__order input[type=text] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-    text-align: left;
-}
-
-#contacts {
-    margin: 0 -15px;
-}
+#contacts {}
 
 #map {
     width: 100%;
     height: 350px;
-    position: absolute;
-    z-index: 0;
-
+    margin-top: 50px;
 
 }
 
 .h3__hr {
-
-    align: center;
     width: 220px;
     border: 1px solid #FBBB1F;
 
 }
 
+.adresses {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
 .adress {
+
     width: 283px;
     height: 192px;
-    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -400,30 +418,27 @@ order-courses-form {
     line-height: 21px;
     color: #423C4A;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-
-
 }
 
+/* так футер не прижимается к низу
 .adresses {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
 }
 
 .adress_office {
-    position: relative;
-    z-index: 1;
-
+    position: absolute;
+    left: 10px;
+    bottom: 79px;
 }
 
 .adress_study {
-    position: relative;
-    z-index: 1;
+    position: absolute;
     right: 10px;
-    top: 79px;
-}
+    bottom: 79px;
+}*/
 
 .footer {
+    flex: 0 0 auto;
     display: flex;
     justify-content: space-around;
     align-items: center;

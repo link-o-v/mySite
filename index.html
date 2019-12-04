@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap&subset=cyrillic" rel="stylesheet">
+    <script src="Script.js"></script>
 </head>
 
 <body>
-    <img src="img/14840.png" id="bg">
     <header class="header container">
         <div class="header__logo"></div>
         <h1>ООО "ИТ-Сервис"</h1>
@@ -71,12 +71,15 @@
                     <p>Конфигурация "с Подрядчиком" - <span> 7200грн</span></h3>
                     </p>
                     <p>Конфигурация "БЕЗ Подрядчика" - <span>5400грн</span></p>
-                    <div class="btn price__order-avk__button" onclick="myFunction()">Заказать!
-                        <div class="popup-wrapper">
-                        <div class="popup price__order-avk__popup" id="myPopup">
-                            <h3>Заказ ПК-АВК-5</h3>
-                            <p> Чтобы получить счет нажмите кнопку "Заказать!"</p>
-                            <p class="p-small">Заполните форму и наши сотрудники выставят счет на оплату</p>
+                    <button class="btn price__order-avk__button" onclick="document.getElementById('avkPopup').style.display='block'" style="width:auto;">Заказать!</button>
+                    <div class="popup price__order-avk__popup" id="avkPopup">
+                        <div class="form-container">
+                            <div class="textcontainer">
+                                <span onclick="document.getElementById('avkPopup').style.display='none'" class="close-btn" title="Закрыть">×</span>
+                                <h3>Заказ ПК-АВК-5</h3>
+                                <p> Чтобы получить счет нажмите кнопку "Заказать!"</p>
+                                <p class="p-small">Заполните форму и наши сотрудники выставят счет на оплату</p>
+                            </div>
                             <form action="#" class="order-avk-form">
                                 <label for="installs-field">Количество рабочих мест</label><br>
                                 <input type="text" id="installs-field" placeholder="Количество рабочих мест" name="installs" value="2" required><br>
@@ -86,28 +89,26 @@
                                 <input type="text" placeholder="Телефон" name="phone" required><br>
                                 <label for="e-mail-field">E-mail</label><br>
                                 <input type="text" placeholder="E-mail" name="e-mail" required><br>
-                                <button type="submit" class="btn">Заказать</button>
-                            </form>
+                                <div class="textcontainer">
+                                    <button type="submit" class="btn">Заказать</button>
+                                </div>
                         </div>
-                        </div>
+                        </form>
                     </div>
-                    <script>
-                        // When the user clicks on div, open the popup
-                    function myFunction() {
-                        var popup = document.getElementById("myPopup");
-                        popup.classList.toggle("show");
-                    }
-                    </script>
                 </div>
                 <div class="price__order-courses">
                     <h3>Стоимость курсов</h3>
                     <p>Обучение в группе - <span>4200грн</span> (с НДС)</p>
                     <p>Индивидуальное обучение - <span>5400грн</span></p>
-                    <div class=" btn price__order-courses__button" onclick="myFunction1()">Заказать!
-                        <div class=" popup price__order-courses__popup" id="myPopup1">
-                            <h3>Заказ курсов АВК-5</h3>
-                            <p> Чтобы получить счет нажмите кнопку "Заказать!"</p>
-                            <p class="p-small">Заполните форму и наши сотрудники выставят счет на оплату</p>
+                    <button class=" btn price__order-courses__button" onclick="document.getElementById('coursesPopup').style.display='block'" style="width:auto;">Заказать!</button>
+                    <div class=" popup price__order-courses__popup" id="coursesPopup">
+                        <div class="form-container">
+                            <div class="textcontainer">
+                                <span onclick="document.getElementById('coursesPopup').style.display='none'" class="close-btn" title="Закрыть">×</span>
+                                <h3>Заказ курсов АВК-5</h3>
+                                <p> Чтобы получить счет нажмите кнопку "Заказать!"</p>
+                                <p class="p-small">Заполните форму и наши сотрудники выставят счет на оплату</p>
+                            </div>
                             <form action="#" class="order-courses-form">
                                 <label for="students-field">Количество учеников</label><br>
                                 <input type="text" id="students-field" placeholder="Количество учеников" name="students" required><br>
@@ -117,38 +118,32 @@
                                 <input type="text" placeholder="Телефон" name="phone"><br>
                                 <label for="e-mail-field">E-mail</label><br>
                                 <input type="text" placeholder="E-mail" name="e-mail" required><br>
-                                <button type="submit" class="btn price__order-avk__button">Заказать</button>
+                                <div class="textcontainer">
+                                    <button type="submit" class="btn">Заказать</button>
+                                </div>
                             </form>
                         </div>
                     </div>
-                    <script>
-                    // When the user clicks on div, open the popup
-                    function myFunction1() {
-                        var popup = document.getElementById("myPopup1");
-                        popup.classList.toggle("show");
-                    }
-                    </script>
                 </div>
             </div>
         </section>
         <section id="contacts" class="container">
             <h2>Наши контакты</h2>
             <hr class="h3__hr">
-            <div id="map">
-            </div>
+            <div id="map"></div>
             <div class="adresses">
                 <div class="adress adress_office">
                     <p>Наш адрес:</p>
                     <hr class="h3__hr">
-                    Днепр<br>
-                    пр. Мануйловский, 73,<br>
-                    офис 706</p>
+                    <p>Днепр<br>
+                        пр. Мануйловский, 73,<br>
+                        офис 706</p>
                 </div>
                 <div class="adress adress_study">
                     <p>Учебный класс</p>
                     <hr class="h3__hr">
                     <p>Днепр<br>
-                        ул. Андрея Фабра (бывш. Серова) 4,<br>
+                        ул. Андрея Фабра (бывш. Серова) 4,
                         офис 8</p>
                 </div>
             </div>
