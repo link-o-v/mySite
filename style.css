@@ -15,6 +15,7 @@ a {
 
 main {
     background-image: url(img/14840.png);
+    margin-top: -10px;
     min-width: 100%;
     min-height: 100%;
 }
@@ -34,35 +35,25 @@ body {
     padding: 0;
 }
 
-/* контейнер (устанавливает  ширину блока в зависимости от ширины viewport) */
-/*.container {
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 15px;
-    padding-left: 15px;
-}*/
-
-
-
 .header__menu__img {
     display: none;
     position: fixed;
     top: 34px;
-    right: 27px;
+    right: 8%;
     width: 31px;
-    height: 31px;
-    background: url(img/menu.png) white;
+    height: 33px;
+    background: url(img/menu.png) no-repeat;
+    opacity: 0.6;
 }
 
-.header__memu__arrow {
+.header__menu__arrow {
     display: none;
     position: absolute;
     width: 67px;
     height: 67px;
     left: 25px;
     bottom: 35px;
-    background: url(img/arrowDown.png) white;
+    background: url(img/arrowDown.png);
 }
 
 .header {
@@ -72,7 +63,7 @@ body {
     justify-content: space-around;
     background: url(img/architect-569361_1280.png);
     width: 100%;
-    height: 702.98px;
+    min-height: 702.98px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-attachment: fixed;
     background-position: center;
@@ -110,7 +101,6 @@ header h1 {
     font-size: 24px;
     line-height: 36px;
     /* or 150% */
-
     color: #423C4A;
 
 }
@@ -251,22 +241,23 @@ h2 {
 
 
 .price__order {
-    height: 400px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
-    line-height: 16px;
+
 }
 
 .price__order-avk {
     width: 43%;
+    min-height: 400px;
     padding: 20px 40px;
     background: #FBFBFB;
     color: #423C4A;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
     border-radius: 40px 0px 0px 40px;
     text-align: center;
+
 }
 
 h3 {
@@ -286,7 +277,7 @@ h3 {
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    line-height: 16px;
+    line-height: 24px;
     color: #01B460;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
 }
@@ -294,6 +285,7 @@ h3 {
 .price__order-courses {
 
     width: 43%;
+    min-height: 400px;
     padding: 20px 40px;
     background: #423C4A;
     color: #FBFBFB;
@@ -417,16 +409,10 @@ h3 {
 
 }
 
-/*.adresses {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-}*/
-
 .adress {
     width: 283px;
     height: 192px;
+    padding: 0 31px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -443,6 +429,7 @@ h3 {
 
 .adresses {
     position: relative;
+    width: 100%;
 }
 
 .adress_office {
@@ -486,6 +473,14 @@ h3 {
 }
 
 @media screen and (max-width: 850px) {
+    main {
+        background-image: url(img/14840_mob.png) no-repeat;
+    }
+
+    .header {
+        min-height: 853px;
+    }
+
     .header h1 {
         white-space: normal;
         font-size: 48px;
@@ -495,7 +490,10 @@ h3 {
     .header__p {
         font-size: 20px;
         line-height: 40px;
+        margin-bottom: 157px;
     }
+
+
 
     h2 {
         white-space: normal;
@@ -517,8 +515,9 @@ h3 {
         display: block;
     }
 
-    .header__memu__arrow {
+    .header__menu__arrow {
         display: block;
+
     }
 
     .our-services__avk,
@@ -538,11 +537,13 @@ h3 {
     .our-services__avk__about-avk {
         width: 85%;
         border-radius: 0px 0px 40px 40px;
+        padding: 10px 20px;
     }
 
     .our-services__study__about-courses {
         width: 85%;
         border-radius: 0px 0px 40px 40px;
+        padding: 10px 20px;
     }
 
     .our-services__study__courses {
@@ -561,18 +562,23 @@ h3 {
         border-radius: 0px 0px 40px 40px;
     }
 
+    .h3__hr {
+        width: 120px;
+    }
+
     .adress {
         width: 170px;
         height: 120px;
         font-size: 12px;
         line-height: 14px;
+        padding: 0 25px;
 
     }
 
     .adress_office {
         position: absolute;
         left: 25px;
-        top: 18px;
+        bottom: 211px;
     }
 
     .adress_study {
@@ -584,8 +590,7 @@ h3 {
     .footer {
         flex-direction: column;
         flex: 1 1 auto;
-        align-items: left;
-
+        justify-content: space-around;
     }
 
     .footer__arrow {

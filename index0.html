@@ -10,19 +10,16 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap&subset=cyrillic" rel="stylesheet">
-    <script src="Script.js"></script>
 </head>
 
 <body>
     <header class="header container">
         <div class="header__logo"></div>
-        <div class="header__menu__img"></div>
         <h1>ООО "ИТ-Сервис"</h1>
         <ul class="header__p">
             <li>Официальные дилеры ПК АВК-5</li>
             <li>Обучение сметному делу</li>
         </ul>
-        <div class="header__menu__arrow"></div>
         <nav class="header__nav">
             <ul class="header__nav__menu">
                 <li><a href="#our-services">Наши услуги</a></li>
@@ -73,44 +70,43 @@
                     <p>Конфигурация "с Подрядчиком" - <span> 7200грн</span></h3>
                     </p>
                     <p>Конфигурация "БЕЗ Подрядчика" - <span>5400грн</span></p>
-                    <button class="btn price__order-avk__button" onclick="document.getElementById('avkPopup').style.display='block'" style="width:auto;">Заказать!</button>
-                    <div class="popup price__order-avk__popup" id="avkPopup">
-                        <div class="form-container">
-                            <div class="textcontainer">
-                                <span onclick="document.getElementById('avkPopup').style.display='none'" class="close-btn" title="Закрыть">×</span>
+                    <div class="btn price__order-avk__button" onclick="myFunction()">Заказать!
+                        <div class="popup-wrapper">
+                            <div class="popup price__order-avk__popup" id="myPopup">
                                 <h3>Заказ ПК-АВК-5</h3>
                                 <p> Чтобы получить счет нажмите кнопку "Заказать!"</p>
                                 <p class="p-small">Заполните форму и наши сотрудники выставят счет на оплату</p>
-                            </div>
-                            <form action="#" class="order-avk-form">
-                                <label for="installs-field">Количество рабочих мест</label><br>
-                                <input type="text" id="installs-field" placeholder="Количество рабочих мест" name="installs" value="2" required><br>
-                                <label for="organization-field"><br>Организация</label><br>
-                                <input type="text" placeholder="Организация" name="organization" required><br>
-                                <label for="phone-field">Телефон</label><br>
-                                <input type="text" placeholder="Телефон" name="phone" required><br>
-                                <label for="e-mail-field">E-mail</label><br>
-                                <input type="text" placeholder="E-mail" name="e-mail" required><br>
-                                <div class="textcontainer">
+                                <form action="#" class="order-avk-form">
+                                    <label for="installs-field">Количество рабочих мест</label><br>
+                                    <input type="text" id="installs-field" placeholder="Количество рабочих мест" name="installs" value="2" required><br>
+                                    <label for="organization-field"><br>Организация</label><br>
+                                    <input type="text" placeholder="Организация" name="organization" required><br>
+                                    <label for="phone-field">Телефон</label><br>
+                                    <input type="text" placeholder="Телефон" name="phone" required><br>
+                                    <label for="e-mail-field">E-mail</label><br>
+                                    <input type="text" placeholder="E-mail" name="e-mail" required><br>
                                     <button type="submit" class="btn">Заказать</button>
-                                </div>
+                                </form>
+                            </div>
                         </div>
-                        </form>
                     </div>
+                    <script>
+                        // When the user clicks on div, open the popup
+                    function myFunction() {
+                        var popup = document.getElementById("myPopup");
+                        popup.classList.toggle("show");
+                    }
+                    </script>
                 </div>
                 <div class="price__order-courses">
                     <h3>Стоимость курсов</h3>
                     <p>Обучение в группе - <span>4200грн</span> (с НДС)</p>
                     <p>Индивидуальное обучение - <span>5400грн</span></p>
-                    <button class=" btn price__order-courses__button" onclick="document.getElementById('coursesPopup').style.display='block'" style="width:auto;">Заказать!</button>
-                    <div class=" popup price__order-courses__popup" id="coursesPopup">
-                        <div class="form-container">
-                            <div class="textcontainer">
-                                <span onclick="document.getElementById('coursesPopup').style.display='none'" class="close-btn" title="Закрыть">×</span>
-                                <h3>Заказ курсов АВК-5</h3>
-                                <p> Чтобы получить счет нажмите кнопку "Заказать!"</p>
-                                <p class="p-small">Заполните форму и наши сотрудники выставят счет на оплату</p>
-                            </div>
+                    <div class=" btn price__order-courses__button" onclick="myFunction1()">Заказать!
+                        <div class=" popup price__order-courses__popup" id="myPopup1">
+                            <h3>Заказ курсов АВК-5</h3>
+                            <p> Чтобы получить счет нажмите кнопку "Заказать!"</p>
+                            <p class="p-small">Заполните форму и наши сотрудники выставят счет на оплату</p>
                             <form action="#" class="order-courses-form">
                                 <label for="students-field">Количество учеников</label><br>
                                 <input type="text" id="students-field" placeholder="Количество учеников" name="students" required><br>
@@ -120,12 +116,17 @@
                                 <input type="text" placeholder="Телефон" name="phone"><br>
                                 <label for="e-mail-field">E-mail</label><br>
                                 <input type="text" placeholder="E-mail" name="e-mail" required><br>
-                                <div class="textcontainer">
-                                    <button type="submit" class="btn">Заказать</button>
-                                </div>
+                                <button type="submit" class="btn price__order-avk__button">Заказать</button>
                             </form>
                         </div>
                     </div>
+                    <script>
+                    // When the user clicks on div, open the popup
+                    function myFunction1() {
+                        var popup = document.getElementById("myPopup1");
+                        popup.classList.toggle("show");
+                    }
+                    </script>
                 </div>
             </div>
         </section>
@@ -169,7 +170,6 @@
         </section>
     </main>
     <footer class="footer container">
-        <div class="footer__arrow"></div>
         <div class="footer__logo"></div>
         <div>
             <p>© 2019 ООО «ИТ-Сервис»</p>
