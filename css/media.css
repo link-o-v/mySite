@@ -1,0 +1,192 @@
+@media screen and (max-width: 850px) {
+    html {
+        font-size: 14px;
+    }
+
+    main {
+        background: rgb(251, 187, 31, 0.5);
+    }
+
+    header {
+        min-height: 853px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    header h1 {
+        white-space: pre-line;
+        line-height: 1.25em;
+        font-size: 4em;
+
+    }
+
+    .header__ul {
+
+        margin-bottom: 157px;
+        font-size: 1.3em;
+    }
+
+    h2 {
+        white-space: normal;
+
+    }
+
+    .h2-hr {
+        margin-bottom: 62px;
+        width: 127px;
+    }
+
+    .header__nav {
+        display: none;
+    }
+
+    .header__mobburger {
+        display: block;
+    }
+
+
+    .header__mobarrow {
+        display: block;
+
+    }
+
+    .our-services__avk,
+    .our-services__study,
+    .price__order {
+        flex-flow: column nowrap;
+        flex: 0 1 auto;
+        margin-bottom: 149px;
+    }
+
+    .our-services__avk__img {
+        border-radius: 40px 40px 0px 0px;
+    }
+
+    .our-services__avk__about-avk {
+
+        border-radius: 0px 0px 40px 40px;
+        padding: 10px 20px;
+    }
+
+    .our-services__study__about-courses {
+
+        border-radius: 0px 0px 40px 40px;
+        padding: 10px 20px;
+    }
+
+    .our-services__study__courses {
+        order: -1;
+        border-radius: 40px 40px 0px 0px;
+    }
+
+    .price__order-avk {
+        padding: 20px 20px;
+        border-radius: 40px 40px 0px 0px;
+    }
+
+    .price__order-courses {
+        padding: 20px 20px;
+        border-radius: 0px 0px 40px 40px;
+    }
+
+    .h3-hr {
+        width: 120px;
+    }
+
+    .adress {
+        width: 170px;
+        height: 120px;
+        font-size: 12px;
+        line-height: 14px;
+        padding: 0 20px;
+
+    }
+
+    .adress_office {
+        position: absolute;
+        left: 25px;
+        bottom: 115px;
+    }
+
+    .adress_study {
+        position: absolute;
+        right: 25px;
+        bottom: 115px;
+    }
+
+    footer {
+        min-height: 584px;
+        flex-direction: column;
+        flex: 1 1 auto;
+        align-items: baseline;
+        padding: 10px;
+        height
+    }
+
+    .footer__mobarrow {
+        display: block;
+    }
+
+    .footer__logo {
+        order: 1;
+    }
+
+    .form-container {
+        width: 90vw;
+        height: 90vh;
+
+    }
+
+    .textcontainer p {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 430px) {
+
+    html {
+        font-size: 12px;
+
+    }
+
+    main {
+        background-repeat: repeat-y;
+    }
+
+    .our-services__avk__img,
+    .our-services__avk__about-avk,
+    .our-services__study__about-courses,
+    .our-services__study__courses,
+    .price__order-avk,
+    .price__order-courses {
+
+        width: 85%;
+    }
+
+    .adress_office {
+        position: absolute;
+        left: 50%;
+        margin-left: -85px;
+        bottom: 200px;
+    }
+
+    .adress_study {
+        position: absolute;
+        left: 50%;
+        margin-left: -85px;
+        bottom: 50px;
+    }
+
+    .our-services__avk__img,
+    .our-services__study__courses {
+        height: 300px;
+    }
+
+    .price__order input[type=text] {
+        padding: 6px 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+    }
+}

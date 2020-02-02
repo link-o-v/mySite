@@ -7,35 +7,54 @@
     <meta name="keywords" content="авк, АВК-5, курсы сметчиков, сметное дело, программа для сметчиков, авк днепр">
     <meta name="description" content="Поставка  и лицензионное обслуживание программного комплекса для сметчиков -  АВК-5, курсы сметного дела">
     <title>ПК "АВК-5", курсы сметного дела</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
     <link rel="shortcut icon" type="image/ico" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap&subset=cyrillic" rel="stylesheet">
-    <script src="Script.js"></script>
 </head>
 
 <body>
-    <header class="header container">
-        <div class="header__logo"></div>
-        <div class="header__menu__img"></div>
-        <h1>ООО "ИТ-Сервис"</h1>
-        <ul class="header__p">
+    <header>
+        <div class="header__logo" id="top"></div>
+        <span class="menu-icon closed" id="menuBtn"></span>
+        <nav class="menu-container closed" id="menuContainer">
+            <ul>
+                <li><a href="#our-services"><img src="img/2776859 1.png">Наши услуги</a></li>
+                <li><a href="#price"><img src="img/2776859 2.png">Цены</a></li>
+                <li><a href="#contacts"><img src="img/2776859 3.png">Наши контакты</a></li>
+                <li><a href="libr/Price_list_2019.doc" download><img src="img/2776859 4.png">Скачать прайс ПК АВК-5</a></li>
+            </ul>
+        </nav>
+        <!--<div class="header__mobburger">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>-->
+        <h1>ООО
+            "ИТ-Сервис"</h1>
+        <ul class="header__ul">
             <li>Официальные дилеры ПК АВК-5</li>
             <li>Обучение сметному делу</li>
         </ul>
-        <div class="header__menu__arrow"></div>
+        <a href="#our-services">
+            <div class="header__mobarrow"></div>
+        </a>
         <nav class="header__nav">
-            <ul class="header__nav__menu">
+            <ul class="header__nav-menu">
                 <li><a href="#our-services">Наши услуги</a></li>
                 <li><a href="#price">Цены</a></li>
                 <li><a href="#contacts">Наши контакты</a></li>
-                <li><a href="Price_list_2017.doc" download>Скачать прайс ПК АВК-5</a></li>
+                <li><a href="libr/Price_list_2019.doc" download>Скачать прайс ПК АВК-5</a></li>
             </ul>
         </nav>
     </header>
-    <main class="container">
+    <main>
         <section id="our-services">
             <h2>ПК АВК-5</h2>
-            <hr class="h2__hr">
+            <hr class="h2-hr">
             <div class="our-services__avk">
                 <div class="our-services__avk__img"></div>
                 <div class="our-services__avk__about-avk">
@@ -49,7 +68,7 @@
                 </div>
             </div>
             <h2>Курсы "Сметное дело в строительстве"</h2>
-            <hr class="h2__hr">
+            <hr class="h2-hr">
             <div class="our-services__study">
                 <div class="our-services__study__about-courses">
                     <p>Учебный центр компании «ИТ-Сервис» проводит курсы по подготовке специалистов сметного дела на базе программного комплекса «АВК-5» с разным начальным уровнем знаний. Нашими специалистами разработана специальная программа обучения, предназначенная, как для опытных, так и для начинающих сметчиков. Не переживайте, если у Вас нет диплома строительного ВУЗа, достаточно начальных экономических знаний и желание освоить профессию сметчика.<br>
@@ -66,18 +85,18 @@
         </section>
         <section id="price">
             <h2>Стоимость</h2>
-            <hr class="h2__hr">
+            <hr class="h2-hr">
             <div class="price__order">
                 <div class="price__order-avk">
                     <h3>Стоимость ПК АВК-5</h3>
-                    <p>Конфигурация "с Подрядчиком" - <span> 7200грн</span></h3>
+                    <p>Конфигурация "с Подрядчиком" -<br> <span> 9150грн</span></h3>
                     </p>
-                    <p>Конфигурация "БЕЗ Подрядчика" - <span>5400грн</span></p>
+                    <p>Конфигурация "БЕЗ Подрядчика" - <br><span>7080грн</span></p>
                     <button class="btn price__order-avk__button" onclick="document.getElementById('avkPopup').style.display='block'" style="width:auto;">Заказать!</button>
-                    <div class="popup price__order-avk__popup" id="avkPopup">
+                    <div class="popup" id="avkPopup">
                         <div class="form-container">
+                            <span onclick="document.getElementById('avkPopup').style.display='none'" class="close-btn" title="Закрыть">×</span>
                             <div class="textcontainer">
-                                <span onclick="document.getElementById('avkPopup').style.display='none'" class="close-btn" title="Закрыть">×</span>
                                 <h3>Заказ ПК-АВК-5</h3>
                                 <p> Чтобы получить счет нажмите кнопку "Заказать!"</p>
                                 <p class="p-small">Заполните форму и наши сотрудники выставят счет на оплату</p>
@@ -85,28 +104,28 @@
                             <form action="#" class="order-avk-form">
                                 <label for="installs-field">Количество рабочих мест</label><br>
                                 <input type="text" id="installs-field" placeholder="Количество рабочих мест" name="installs" value="2" required><br>
-                                <label for="organization-field"><br>Организация</label><br>
+                                <label for="organization-field">Организация</label><br>
                                 <input type="text" placeholder="Организация" name="organization" required><br>
                                 <label for="phone-field">Телефон</label><br>
                                 <input type="text" placeholder="Телефон" name="phone" required><br>
                                 <label for="e-mail-field">E-mail</label><br>
                                 <input type="text" placeholder="E-mail" name="e-mail" required><br>
-                                <div class="textcontainer">
-                                    <button type="submit" class="btn">Заказать</button>
-                                </div>
+                            </form>
+                            <div class="textcontainer">
+                                <button type="submit" class="btn">Заказать</button>
+                            </div>
                         </div>
-                        </form>
                     </div>
                 </div>
                 <div class="price__order-courses">
                     <h3>Стоимость курсов</h3>
-                    <p>Обучение в группе - <span>4200грн</span> (с НДС)</p>
-                    <p>Индивидуальное обучение - <span>5400грн</span></p>
-                    <button class=" btn price__order-courses__button" onclick="document.getElementById('coursesPopup').style.display='block'" style="width:auto;">Заказать!</button>
-                    <div class=" popup price__order-courses__popup" id="coursesPopup">
+                    <p>Обучение в группе - <br><span>4200грн</span> (с НДС)</p>
+                    <p>Индивидуальное обучение - <br><span>5400грн</span></p>
+                    <button class=" btn" onclick="document.getElementById('coursesPopup').style.display='block'" style="width:auto;">Заказать!</button>
+                    <div class=" popup " id="coursesPopup">
                         <div class="form-container">
+                            <span onclick="document.getElementById('coursesPopup').style.display='none'" class="close-btn" title="Закрыть">×</span>
                             <div class="textcontainer">
-                                <span onclick="document.getElementById('coursesPopup').style.display='none'" class="close-btn" title="Закрыть">×</span>
                                 <h3>Заказ курсов АВК-5</h3>
                                 <p> Чтобы получить счет нажмите кнопку "Заказать!"</p>
                                 <p class="p-small">Заполните форму и наши сотрудники выставят счет на оплату</p>
@@ -114,62 +133,47 @@
                             <form action="#" class="order-courses-form">
                                 <label for="students-field">Количество учеников</label><br>
                                 <input type="text" id="students-field" placeholder="Количество учеников" name="students" required><br>
-                                <label for="organization-field"><br>Организация</label><br>
+                                <label for="organization-field">Организация</label><br>
                                 <input type="text" placeholder="Организация" name="organization" required><br>
                                 <label for="phone-field">Телефон</label><br>
                                 <input type="text" placeholder="Телефон" name="phone"><br>
                                 <label for="e-mail-field">E-mail</label><br>
                                 <input type="text" placeholder="E-mail" name="e-mail" required><br>
-                                <div class="textcontainer">
-                                    <button type="submit" class="btn">Заказать</button>
-                                </div>
                             </form>
+                            <div class="textcontainer">
+                                <button type="submit" class="btn">Заказать</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contacts" class="container">
+        <section id="contacts">
             <h2>Наши контакты</h2>
-            <hr class="h3__hr">
+            <hr class="h2-hr">
             <div id="map"></div>
             <div class="adresses">
                 <div class="adress adress_office">
                     <p>Наш адрес:</p>
-                    <hr class="h3__hr">
+                    <hr class="h3-hr">
                     <p>Днепр<br>
                         пр. Мануйловский, 73,<br>
                         офис 706</p>
                 </div>
                 <div class="adress adress_study">
                     <p>Учебный класс</p>
-                    <hr class="h3__hr">
+                    <hr class="h3-hr">
                     <p>Днепр<br>
-                        ул. Андрея Фабра (бывш. Серова) 4,
+                        ул. Андрея Фабра, 4,
                         офис 8</p>
                 </div>
             </div>
-            <script>
-            // Initialize and add the map
-            function initMap() {
-                // The location of Uluru
-                var office = { lat: 48.490770, lng: 35.061738 };
-                var study = { lat: 48.468476, lng: 35.036337 };
-                var center = { lat: 48.479932, lng: 35.048738 };
-                // The map, centered at Uluru
-                var map = new google.maps.Map(
-                    document.getElementById('map'), { zoom: 13, center: center });
-                // The marker, positioned at Uluru
-                var marker = new google.maps.Marker({ position: office, map: map });
-                var marker = new google.maps.Marker({ position: study, map: map });
-            }
-            </script>
-            <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyRwRnkQn2k-0OuU3p-IFWF5TZpzYHqYE&callback=initMap">
-            </script>
         </section>
     </main>
-    <footer class="footer container">
-        <div class="footer__arrow"></div>
+    <footer>
+        <a href="#top">
+            <div class="footer__mobarrow"></div>
+        </a>
         <div class="footer__logo"></div>
         <div>
             <p>© 2019 ООО «ИТ-Сервис»</p>
@@ -180,6 +184,25 @@
             <p> <a href="mailto:ooo.it.service@gmail.com"> ooo.it.service@gmail.com</a> </p>
         </div>
     </footer>
+    <script src="js/common.js"></script>
+    <script src="js/mob-menu.js"></script>
+    <script>
+    // Initialize and add the map
+    function initMap() {
+        // The location of Uluru
+        var office = { lat: 48.490770, lng: 35.061738 };
+        var study = { lat: 48.468476, lng: 35.036337 };
+        var center = { lat: 48.479932, lng: 35.048738 };
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+            document.getElementById('map'), { zoom: 13, center: center });
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({ position: office, map: map });
+        var marker = new google.maps.Marker({ position: study, map: map });
+    }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCyRwRnkQn2k-0OuU3p-IFWF5TZpzYHqYE&callback=initMap">
+    </script>
 </body>
 
 </html>
